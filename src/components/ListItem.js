@@ -4,13 +4,22 @@ import CardSection from './CardSection';
 
 class ListItem extends React.Component {
   render() {
-    console.log(this.props)
+    const { titleStyle } = styles;
     return (
       <CardSection>
-        <Text>{this.props.library.item.title}</Text>
+        <Text style={titleStyle}>
+          {this.props.library.item.title}
+        </Text>
       </CardSection>
     );
   };
+}
+
+const styles = {
+  titleStyle: {
+    fontSize: 18,
+    paddingLeft: 15,
+  }
 }
 
 export default ListItem;
